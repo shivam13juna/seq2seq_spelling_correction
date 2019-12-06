@@ -89,7 +89,7 @@ def tokenize(text):
     return tokens
 
     
-def add_speling_erors(token, error_rate):
+def add_spelling_erors(token, error_rate):
     """Simulate some artificial spelling mistakes."""
     assert(0.0 <= error_rate < 1.0)
     if len(token) < 3:
@@ -134,7 +134,7 @@ def transform(tokens, maxlen, error_rate=0.3, shuffle=True):
     decoder_tokens = []
     target_tokens = []
     for token in tokens:
-        encoder = add_speling_erors(token, error_rate=error_rate)
+        encoder = add_spelling_erors(token, error_rate=error_rate)
         encoder += EOS * (maxlen - len(encoder)) # Padded to maxlen.
         encoder_tokens.append(encoder)
     

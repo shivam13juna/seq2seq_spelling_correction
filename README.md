@@ -15,9 +15,9 @@ Target sentence:
 
 Some ideas for further improvement on speller performance:
 
-* Implement an attention mechanism
+<!-- * Implement an attention mechanism
 * Incorporate beam search as part of the loss evaluation
-* Extend to high-order ngrams to capture intra-word contexts
+* Extend to high-order ngrams to capture intra-word contexts -->
 
 ## Requirements
 The code is tested on Ubuntu 16.04 with the following components:

@@ -2,7 +2,7 @@ import os
 import numpy as np
 
 np.random.seed(1234)
-os.environ['CUDA_VISIBLE_DEVICES'] = '0'
+# os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
 from utils import CharacterTable, transform
 from utils import batch, datagen, decode_sequences
@@ -11,17 +11,12 @@ from model import seq2seq
 
 error_rate = 0.8
 hidden_size = 512
-nb_epochs = 100
-train_batch_size = 128
-val_batch_size = 256
+nb_epochs = 300
+train_batch_size = 4120
+val_batch_size = 2560
 sample_mode = 'argmax'
-# Input sequences may optionally be reversed,
-# shown to increase performance by introducing
-# shorter term dependencies between source and target:
-# "Learning to Execute"
-# http://arxiv.org/abs/1410.4615
-# "Sequence to Sequence Learning with Neural Networks"
-# https://arxiv.org/abs/1409.3215
+
+
 reverse = True
 
 data_path = './data'
